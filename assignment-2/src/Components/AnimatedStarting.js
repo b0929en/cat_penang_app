@@ -1,11 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import PenanagMountainImage from '../Sources/PenangMountain.png';
 import DecorativeClouds from '../Sources/PenangCloud.png'
+import PenangLogo from '../Sources/PenangFlag3d.png'
 
 const AnimatedStarting = () => {
   const [scrollScale, setScrollScale] = useState(1);
   const [opacity, setOpacity] = useState(1);
+  const [showHeaderBackground, setShowHeaderBackground] = useState(false);
   const [isFixed, setIsFixed] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+    document.body.style.overflow = !isOpen ? 'hidden' : 'visible';
+  };
+  
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setIsOpen(false);
+    }
+  };
   
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +47,7 @@ const AnimatedStarting = () => {
       setScrollScale(Math.min(scale, 2.0)); // Limit max zoom to 2.0
       setOpacity(1);
       setIsFixed(true);
+      setShowHeaderBackground(false);
     }
 
     if (scrollPosition >= zoomThreshold) {
@@ -24,6 +55,7 @@ const AnimatedStarting = () => {
       const fadeDistance = 300; // Total scroll distance for fading out
       const newOpacity = Math.max(1 - (scrollPosition - fadeStart) / fadeDistance, 0);
       setOpacity(newOpacity);
+      setShowHeaderBackground(true);
 
     if (newOpacity === 0) setIsFixed(false);
     }
@@ -38,17 +70,30 @@ const AnimatedStarting = () => {
 
   return (
     <div className="app">
-      <div className="nav-buttons">
-        <button className="nav-button">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M3 12h18M3 6h18M3 18h18" />
-          </svg>
-        </button>
-        <button className="nav-button">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
+      <div className={`sidebar-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}/>
+      <div className={`HeaderBar ${showHeaderBackground ? 'with-background' : ''}`}>
+        <div onClick={scrollToTop} className='Home-logo' role="button" tabIndex={0}>
+          <img src={PenangLogo} alt='Penang state' className='Penang  LogoPic'/>
+          <p className='LogoTitle'>Penang</p>
+        </div>
+
+        <div className={`SectionNav ${isOpen ? 'open' : ''}`}>
+          <button onClick={() => scrollToSection('tourism')} className='nav-link'>Tourism Spots</button>
+          <button onClick={() => scrollToSection('food')} className='nav-link'>Food & Beverages</button>
+          <button onClick={() => scrollToSection('hotel')} className='nav-link'>Hotel</button>
+          <button onClick={() => scrollToSection('events')} className='nav-link'>Events</button>
+        </div>
+
+        {/*Add About Penang section */}
+        {/*Nav-button keeps? changed to>? */}
+
+        <div className="nav-buttons">
+          <button className="nav-button" onClick={toggleSidebar}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <div className={`AnimatedPic ${isFixed ? 'fixed' : 'relative'}`} style={{
@@ -87,8 +132,7 @@ const AnimatedStarting = () => {
         </div>
       </div>
 
-      {/* Add space for scrolling */}
-      <div style={{ height: '300vh' }}></div>
+      <div style={{ height: '400vh' }}></div>
     </div>
   );
 };
