@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+### Folder structure:
+/public/DynamicSources         = Sources like picture about food sections
+/src/StaticSources                 =Pic like window background that aren't changing 
+/src/Components                 = Reusable component (by calling je )
+/src/Sections                        = like my FoodNBeverage sections
+/src/Sources                          = i alrd modify to static sources This maybe remove later
+/src/Styles                              = All css files
