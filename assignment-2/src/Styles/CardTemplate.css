@@ -1,0 +1,302 @@
+.ItemSlot {
+  position: relative;
+}
+
+.ItemCard {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.CardImg {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e7eb;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.CardLocation, .CardName {
+  margin: 0;
+}
+
+.CardInfo {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 1rem;
+  right: 1rem;
+  background-color: rgb(246, 246, 246);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.05);
+}
+
+.CardLocation {
+  font-size: clamp(0.8rem, 1.5vw, 0.925rem);
+  font-weight: lighter;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  margin: 0;
+}
+
+.CardName {
+  font-size: clamp(0.9rem, 1.7vw, 1rem);
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.PopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.PopupOverlay.active {
+  opacity: 1;
+}
+
+.WindowPop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  background-color: rgb(241, 239, 239);
+  background-image: url('../StaticSources/PopUpWindowBckground.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: clamp(1rem, 3vw, 20px);
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 20px;
+  height: 70vh;
+  max-height: 800px;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 21;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.Left-Side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding: 1rem;
+}
+
+.Right-side {
+  height: auto;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.WindowPop button {
+  float: right;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ff0000;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.WindowPop button:hover {
+  background-color: #cb0000;
+}
+
+.PopupImage {
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-right: 3vw;
+  box-shadow: 20px 20px 6px rgba(0, 0, 0, 0.5);
+  float:left;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 4/3;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.WindowPop.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hide scrollbar when popup is open */
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.PopupContent {
+  width: 100%;
+  padding: clamp(1rem, 3vw, 2rem);
+  position: relative;
+  word-wrap: break-word; 
+  word-break: break-word; 
+  white-space: normal;
+}
+
+.CloseButton {
+  position: absolute;
+  top: 1rem;
+  font-size:clamp(1rem, 2vw, 1.5rem);
+  font-weight: bold;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  z-index: 22;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.CloseButton:hover {
+  background-color: #e5e7eb;
+}
+
+.PopName {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: #111827;
+}
+
+.PopLocation {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 350;
+}
+
+.PopDetails {
+  color: #4b5563;
+  margin-top: 2vh;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.5;
+}
+.Rating {
+  margin: 20px auto;
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.Left-Side , .Right-side, .CloseButton {
+  margin-top: 4vh;
+}
+
+@media screen and (max-width: 600px) {
+  .ItemCard {
+    width: 85vw;
+    height: 30vh;
+    max-width: none;
+    margin-bottom: 2rem;
+  }
+
+  .WindowPop {
+    grid-template-columns: 1fr;
+    width: 95vw;
+    height: 90vh;
+    padding: 1rem;
+    gap: 0px;
+    background-size: cover;
+    margin-top: 0vh;
+  }
+
+  .Left-Side {
+    padding: 0.5rem;
+    margin-top: 1vh;
+  }
+
+  .PopupImage {
+    width: 90%;
+    height: auto;
+    max-height: 35vh;
+    margin: 0.5rem auto;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .Right-side {
+    padding: 0.5rem;
+    margin-top: 0;
+  }
+
+  .PopupContent {
+    padding: 1rem;
+  }
+
+  .PopName {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .PopLocation {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .PopDetails {
+    font-size: 0.9rem;
+    margin-top: 1.5vh;
+    line-height: 1.4;
+  }
+
+  .Rating {
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  .CardInfo {
+    bottom: -1rem;
+    padding: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .CardLocation {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .CardName {
+    font-size: 0.9rem;
+  }
+
+  .CloseButton {
+    top: -0.5rem;
+    right: 0.5rem;
+    font-size: 1rem;
+    color: #000000;
+  }
+
+  /* Adjust popup animation for smoother performance on mobile */
+  .WindowPop {
+    transform: translate(-50%, -50%) scale(0.9);
+    background-image: url('../StaticSources/Mobile-PopupwindowBck.jpg');
+  }
+
+  .WindowPop.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .WindowPop button {
+    padding: 0.2rem 0.6rem;
+    background-color: #cccccc;
+  }
+
+}

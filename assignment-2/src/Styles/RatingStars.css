@@ -1,0 +1,53 @@
+.star-rating {
+    display: inline-flex;
+    gap: 4px;
+    font-size: 2rem; 
+    color: #bfc3c8;
+  }
+  
+  .star {
+    font-size: 4rem;
+    color: #d0d1d2;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: color 0.2s ease-in-out;
+    border: 2px solid transparent; 
+    border-radius: 50%; 
+    padding: 0.3rem;
+  }
+  
+  .star.active {
+    color: #ffd700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .star.editable {
+    cursor: pointer;
+  }
+  
+  .star.editable:hover {
+    transform: scale(1.1);
+  }
+
+  /* Mobile styles (up to 480px) */
+@media screen and (max-width: 480px) {
+  .star-rating {
+    gap: 2px;
+  }
+  
+  .star {
+    font-size: 3rem;
+    padding: 0.2rem;
+  }
+}
+
+/* Tablet styles (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .star-rating {
+    gap: 3px;
+  }
+  
+  .star {
+    font-size: 3rem;
+    padding: 0.25rem;
+  }
+}
