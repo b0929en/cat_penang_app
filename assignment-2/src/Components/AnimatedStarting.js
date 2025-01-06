@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import PenanagMountainImage from '../Sources/PenangMountain.png';
-import DecorativeClouds from '../Sources/PenangCloud.png'
-import PenangLogo from '../Sources/PenangFlag3d.png'
+import PenanagMountainImage from '../StaticSources/PenangMountain.png';
+import DecorativeClouds from '../StaticSources/PenangCloud.png'
+import PenangLogo from '../StaticSources/PenangFlag3d.png'
 
 const AnimatedStarting = () => {
   const [scrollScale, setScrollScale] = useState(1);
@@ -15,6 +15,8 @@ const AnimatedStarting = () => {
       top: 0,
       behavior: 'smooth'
     });
+    document.body.style.overflow = 'visible';
+    setIsOpen(false);
   };
 
   const toggleSidebar = () => {
@@ -25,7 +27,7 @@ const AnimatedStarting = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const headerOffset = 80; // Adjust this value based on your header height
+      const headerOffset =70; // Adjust this value based on your header height
       const elementPosition = section.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -33,6 +35,7 @@ const AnimatedStarting = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+      document.body.style.overflow = 'visible';
       setIsOpen(false);
     }
   };
@@ -73,13 +76,13 @@ const AnimatedStarting = () => {
       <div className={`sidebar-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}/>
       <div className={`HeaderBar ${showHeaderBackground ? 'with-background' : ''}`}>
         <div onClick={scrollToTop} className='Home-logo' role="button" tabIndex={0}>
-          <img src={PenangLogo} alt='Penang state' className='Penang  LogoPic'/>
+          <img src= {PenangLogo} alt='Penang state' className='Penang  LogoPic'/>
           <p className='LogoTitle'>Penang</p>
         </div>
 
         <div className={`SectionNav ${isOpen ? 'open' : ''}`}>
           <button onClick={() => scrollToSection('tourism')} className='nav-link'>Tourism Spots</button>
-          <button onClick={() => scrollToSection('food')} className='nav-link'>Food & Beverages</button>
+          <button onClick={() => scrollToSection('Food&Beverages')} className='nav-link'>Food & Beverages</button>
           <button onClick={() => scrollToSection('hotel')} className='nav-link'>Hotel</button>
           <button onClick={() => scrollToSection('events')} className='nav-link'>Events</button>
         </div>
@@ -99,7 +102,7 @@ const AnimatedStarting = () => {
       <div className={`AnimatedPic ${isFixed ? 'fixed' : 'relative'}`} style={{
         opacity: opacity,
         pointerEvents: opacity > 0 ? 'auto' : 'none', 
-      }}>
+        }}>
         <div className="mountain-image-container">
           <img
             src={PenanagMountainImage}
@@ -132,7 +135,6 @@ const AnimatedStarting = () => {
         </div>
       </div>
 
-      <div style={{ height: '400vh' }}></div>
     </div>
   );
 };

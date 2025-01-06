@@ -1,0 +1,54 @@
+.MobileView-BypassScrolling {
+  display: none;
+}
+.Section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    background-image: url('../StaticSources/SectionBackground1.png');
+    background-size:cover;
+    background-position: center center;
+    padding: 2rem;
+  }
+  
+  .SectionTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: cursive; 
+    margin-bottom: 4rem;
+  }
+  
+  .ItemContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+  /*Tablet View*/ 
+  @media (max-width: 768px) {
+    .MobileView-BypassScrolling {
+      display:flex;
+    }
+    .ItemContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Section {
+      background-image: url('../StaticSources/Mobile-FoodBckground.jpeg');
+    }
+    .MobileView-BypassScrolling {
+      display:flex;
+    }
+    .ItemContainer {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+  }

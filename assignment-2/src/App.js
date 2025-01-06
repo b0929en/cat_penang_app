@@ -1,15 +1,19 @@
 import './App.css';
 import './Styles/AnimatedStarting.css'
+import './Styles/FoodNBeverages.css'
+//import './Styles/CardTemplate.css'
 import React from 'react';
 import AnimatedStarting from './Components/AnimatedStarting';
-//import TemplateCard from './Components/CardTemplate';
+import ItemSection from './Sections/FoodNBeverages';
 
 
 function App() {
   return (
-    <><div>
-      <AnimatedStarting />
-    </div><h1>Testing Scrolling </h1>
+    <>
+    <div>
+      <AnimatedStarting/>
+      <ItemSection/>
+    </div>
 
     </>
   );
