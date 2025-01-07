@@ -1,0 +1,171 @@
+/* General Section Styles */
+.HotelSection {
+  padding: 50px 10%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../StaticSources/SectionBackground2.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.HotelSectionTitle {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for Hotel Section Title */
+.HotelSectionTitle:hover {
+  animation: wobble 1s ease-in-out;
+}
+
+/* Wobble animation */
+@keyframes wobble {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(5deg); }
+  30% { transform: rotate(-5deg); }
+  45% { transform: rotate(3deg); }
+  60% { transform: rotate(-3deg); }
+  75% { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Hotel Item Container */
+.HotelItemContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  justify-items: center;
+}
+
+/* Hotel Card */
+.HotelCard {
+  width: 280px;
+  background-color: transparent;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.HotelCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hotel Image */
+.HotelCard img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+/* Hotel Details */
+.HotelCardContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HotelCardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.HotelCardLocation {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.HotelCardDetails {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  /* Mobile View */
+  .HotelSection {
+    padding: 30px 5%;
+    background-color: antiquewhite;
+    background-image: none;
+  }
+
+  .HotelSectionTitle {
+    font-size: 30px;
+  }
+
+  .HotelItemContainer {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .HotelCard {
+    width: 240px;
+  }
+
+  .HotelCard img {
+    height: 160px;
+  }
+
+  .HotelCardTitle {
+    font-size: 18px;
+  }
+
+  .HotelCardLocation,
+  .HotelCardDetails {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet View */
+  .HotelSection {
+    padding: 40px 10%;
+    background-color: transparent;
+    background-image: url('../StaticSources/SectionBackground2.jpg');
+  }
+
+  .HotelSectionTitle {
+    font-size: 40px;
+  }
+
+  .HotelItemContainer {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+  .HotelCard {
+    width: 260px;
+  }
+
+  .HotelCard img {
+    height: 180px;
+  }
+
+  .HotelCardTitle {
+    font-size: 19px;
+  }
+
+  .HotelCardLocation,
+  .HotelCardDetails {
+    font-size: 14px;
+  }
+}
