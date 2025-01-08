@@ -3,8 +3,16 @@ import React from 'react';
 import '../Styles/AboutUs.css';
 
 const AboutUs = () => {
+  const backgroundStyle = {
+    backgroundImage: 'url("../DynamicSources/BackgroundImage.jpg")', // Replace with your image path
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+  };
+
   return (
-    <div className="about-us-container">
+    <div className="about-us-container" style={backgroundStyle}>
       {/* About Penang Section */}
       <section className="about-penang">
         <h1><br />About Penang</h1>

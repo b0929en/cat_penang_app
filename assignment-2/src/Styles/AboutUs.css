@@ -2,6 +2,11 @@
     font-family: Arial, sans-serif;
     padding: 20px;
     color: #333;
+    background-image: url'../DynamicSources/BackgroundImage.jpg';
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   .about-penang {
