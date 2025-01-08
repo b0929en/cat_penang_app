@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../Styles/RatingStars.css';
 
-const RatingStars = ({ initialRating = 0, totalStars = 5, isEditable = false, onRatingChange }) => {
+const RatingStars = ({ initialRating = 0, totalStars = 5, isEditable = false, onRatingChange}) => {
   const [rating, setRating] = useState(initialRating);
   const [hoverRating, setHoverRating] = useState(0);
 
@@ -36,7 +36,7 @@ const RatingStars = ({ initialRating = 0, totalStars = 5, isEditable = false, on
         return (
           <span
             key={index}
-            className={`star ${isActive ? 'active' : ''} ${isEditable ? 'editable' : ''}`}
+            className={`star ${isActive ? 'active' : ''} ${isEditable ? 'editable' : ''} `}
             onClick={() => handleClick(starValue)}
             onMouseEnter={() => handleMouseEnter(starValue)}
             onMouseLeave={handleMouseLeave}
@@ -53,7 +53,7 @@ RatingStars.propTypes = {
   initialRating: PropTypes.number,
   totalStars: PropTypes.number,
   isEditable: PropTypes.bool,
-  onRatingChange: PropTypes.func
+  onRatingChange: PropTypes.func,
 };
 
 export default RatingStars;
