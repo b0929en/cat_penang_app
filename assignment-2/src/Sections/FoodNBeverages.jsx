@@ -1,6 +1,6 @@
 // ItemSection.js
 import React from 'react';
-import Card from '../Components/CardTemplate.js';
+import Card from '../Components/CardTemplate.jsx';
 
 const items = [
     {
@@ -122,7 +122,7 @@ const ItemSection = () => {
   return (
     <div id='Food&Beverages' className='Section'>
         <div id='MobileView-BypassScrolling' style={{ height: '40vh' }}></div>
-        <div className='SectionTitle'>Food & Beverages</div>
+        <div className='section-title'>Food & Beverages</div>
         <div className='ItemContainer'>
         {items.map((item, index) => (
             <Card

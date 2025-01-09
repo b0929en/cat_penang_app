@@ -1,6 +1,6 @@
 // ItemSection.js
 import React from 'react';
-import HotelCard from '../Components/HotelCard.js';
+import HotelCard from '../Components/HotelCard.jsx';
 
 
 const hotels = [
@@ -79,8 +79,8 @@ const hotels = [
 const ItemSection = () => {
   return (
     <div id='Hotels' className='HotelSection'>
-    <div id='MobileView-BypassScrolling' style={{ height: '40vh' }}></div>
-    <div className='HotelSectionTitle'>Hotels</div>
+    <div id='MobileView-BypassScrolling' style={{ height: '15vh' }}></div>
+    <div className='section-title'>Hotels</div>
     <div className='HotelItemContainer'>
     {hotels.map((hotel, index) => (
         <HotelCard
@@ -95,7 +95,7 @@ const ItemSection = () => {
     
     ))}
     </div>
-    <div style={{ height: '40vh' }}></div>
+    <div style={{ height: '15vh' }}></div>
 </div>
 
   );

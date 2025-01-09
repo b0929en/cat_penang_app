@@ -1,74 +1,119 @@
-.about-us-container {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    color: #333;
-    background-image: url'../DynamicSources/BackgroundImage.jpg';
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  
-  .about-penang {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  .about-penang h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-  }
-  
-  .penang-img{
-    
-  }
+.slider{
+  height: 100vh;
+  position : relative;
+}
 
-  
-  .history-of-penang {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
+.content-item{
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-item::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgb(0, 0, 0, 0.8) 40%, transparent);
+}
+
+.content{
+  position: absolute;
+  color: white;
+  top: 20%;
+  width: 60%;
+  max-width: 80%;
+  z-index: 1;
+  text-align: center;
+}
+
+.content h2{
+  font-size: 80px;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.content p{
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+.content-item.active{
+  opacity: 1;
+  z-index: 10;
+}
+
+@keyframes showContent{
+  to{
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
   }
-  
-  .history-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+}
+
+.content-item.active h2,
+.content-item.active p{
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+
+.content-item.active h2{
+  animation-delay: 1s;
+}
+
+.content-item.active p{
+  animation-duration: 1.3s;
+}
+
+.nav-btn {
+  position: absolute; /* Enable positioning relative to the parent container */
+  top: 50%; /* Vertically center the button */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  background-color: transparent; /* Semi-transparent background */
+  border: none;
+  font-family: monospace;
+  width: 40px;
+  height: 40px;
+  font-size: 4rem;
+  color: #eee;
+  display: flex; /* Center the icon inside the button */
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease-in-out, transform 0.3s;
+  cursor: pointer;
+  z-index: 10; /* Ensure buttons appear above content */
+}
+
+.nav-btn:hover {
+  color: rgb(122, 122, 122);
+  transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
+}
+
+.prev {
+  left: 2.5%; /* Position the button to the left */
+}
+
+.next {
+  right: 2.5%; /* Position the button to the right */
+}
+
+@media screen and (max-width: 1024px) {
+  .content h2{
+    font-size: 50px;
   }
-  
-  .history-image img {
-    width: 400px;
-    border-radius: 10px;
-  }
-  
-  .history-text h2 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .history-text p {
-    line-height: 1.6;
-  }
-  
-  .special-about-penang {
-    text-align: center;
-  }
-  
-  .special-about-penang h2 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .special-about-penang p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .special-about-penang .slogan {
-    font-size: 60px;
-    font-weight: bold;
-    color: #0066cc;
-  }
-  
+}

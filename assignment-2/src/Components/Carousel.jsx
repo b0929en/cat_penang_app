@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Styles/Carousel.css";
+import "../Styles/Carousel.css"
 
 const details_item = {
   1: [
@@ -225,8 +225,8 @@ const Carousel = ({selectedItemId}) => {
   }
 
   return (
-    <div className="wrapper">
-      <div className="container">
+    <div className="crs-wrapper">
+      <div className="crs-container">
         {data.map((slide) => (
           <React.Fragment key={slide.id}>
             <input
@@ -238,12 +238,12 @@ const Carousel = ({selectedItemId}) => {
             />
             <label
               htmlFor={slide.id}
-              className="card"
+              className="crs-card"
               style={{ backgroundImage: `url(${slide.backgroundImage})` }}
             >
-              <div className="row">
-                <div className="icon">{slide.icon}</div>
-                <div className="description">
+              <div className="crs-row">
+                <div className="crs-icon">{slide.icon}</div>
+                <div className="crs-description">
                   <h4>{slide.title}</h4>
                   <p>{slide.description}</p>
                 </div>

@@ -1,6 +1,6 @@
 // ItemSection.js
 import React from 'react';
-import TourismSpotsCard from '../Components/TourismSpotsCard.js';
+import TourismSpotsCard from '../Components/TourismSpotsCard.jsx';
 
 const tourismspots = [
     {
@@ -148,8 +148,8 @@ const tourismspots = [
 const ItemSection = () => {
   return (
     <div id='TourismSpots' className='TourismSpotsSection '>
-        <div id='MobileView-BypassScrolling' className='p-10' style={{ height: '40vh' }}></div>
-            <div className='text-black font-bold text-6xl mb-10 hover:text-yellow-600 hover:animate-pulse cursor-pointer hover:scale-105 transition duration-100'>Tourism Spots</div>
+        <div id='MobileView-BypassScrolling' className='p-10' style={{ height: '10vh' }}></div>
+            <div className='section-title'>Tourism Spots</div>
                 <div className='grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-10'>
                     {tourismspots.map((spots, index) => (
                         <TourismSpotsCard
@@ -162,7 +162,7 @@ const ItemSection = () => {
                         />
                     ))}
                 </div>
-            <div style={{ height: '40vh' }}></div>
+            <div style={{ height: '20vh' }}></div>
     </div>
   );
 };

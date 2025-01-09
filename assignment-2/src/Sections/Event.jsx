@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Styles/Event.css";
-import Carousel from "./Carousel.jsx"
+import Carousel from "../Components/Carousel.jsx"
 
 const Event = () => {
   const items = [
@@ -119,7 +119,7 @@ const Event = () => {
             <Carousel selectedItemId={selectedItem?.id} />
             
             <button className="event-nav-btn" 
-                    onClick={() => {scrollUp; setSelectedItem(null)}}
+                    onClick={() => {scrollUp(); setSelectedItem(null)}}
             >
               <i class='bx bx-chevrons-up'></i>
             </button>

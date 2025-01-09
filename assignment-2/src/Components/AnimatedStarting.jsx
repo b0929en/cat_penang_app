@@ -27,7 +27,7 @@ const AnimatedStarting = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const headerOffset =70; // Adjust this value based on your header height
+      const headerOffset = 80; // Adjust this value based on your header height
       const elementPosition = section.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

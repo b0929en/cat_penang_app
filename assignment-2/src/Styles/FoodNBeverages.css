@@ -9,7 +9,7 @@
   align-content: center;
   justify-content: center;
   justify-items: center;
-  background-image: url('../StaticSources/SectionBackground1.png');
+  /*background-image: url('../StaticSources/SectionBackground1.png');*/
   background-size: cover;
   background-position: center center;
   padding: 2rem;

@@ -10,7 +10,8 @@
   min-height: 138vh;
   background-color: #000000;
   position: relative;
-  overflow-x: hidden;  
+  overflow-x: hidden; 
+  z-index: 1000;
 }
 
 .HeaderBar {
@@ -18,8 +19,8 @@
   top: 0;
   left: 0;
   right: 0;
-  height:10vh;
-  min-height: 70px;
+  height: 80px;
+  min-height: 80px;
   z-index: 20;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
