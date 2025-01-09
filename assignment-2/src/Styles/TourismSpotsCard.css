@@ -1,0 +1,89 @@
+/* .TourismSpotsCard {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+ } */
+
+/* .TourismSpotsCard:hover {
+    transform: scale(1.05);
+ } */
+
+/* .CardInner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+ } */
+
+/* .CardFront {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+ } */
+
+/* .SpotImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+ } */
+
+/* .SpotInfo {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+ }
+ 
+ .SpotTitle {
+    font-size: 1.2rem;
+    color: white;
+ }
+ 
+ .SpotLocation {
+    font-size: 1rem;
+    color: #f1f1f1;
+ }
+ 
+  
+  .RatingSection {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+  }
+  
+  .CardOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .CardOverlay.hovered {
+    height: 25%; /* The overlay will cover 1/4 of the image */
+/* }
+  
+  .OverlayContent {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+  }
+  
+  .SpotDetails {
+    margin-top: 10px;
+  }
+  
+   */
