@@ -51,6 +51,15 @@ const Footer = () => {
           </ul>
         </div>
 
+        <div className="contact-us links">
+          <p>Contact Us</p>
+          <ul>
+            <li><a href="#">Phone xxx</a></li>
+            <li><a href="#">Email xxx</a></li>
+            <li><a href="#">Fax xxx</a></li>
+          </ul>
+        </div>
+
       </div>
 
       <button className="nav-top-btn" onClick={scrollToTop}>
