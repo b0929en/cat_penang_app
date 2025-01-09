@@ -1,0 +1,74 @@
+.about-us-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333;
+    background-image: url'../DynamicSources/BackgroundImage.jpg';
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .about-penang {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .about-penang h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .penang-img{
+    
+  }
+
+  
+  .history-of-penang {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .history-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .history-image img {
+    width: 400px;
+    border-radius: 10px;
+  }
+  
+  .history-text h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .history-text p {
+    line-height: 1.6;
+  }
+  
+  .special-about-penang {
+    text-align: center;
+  }
+  
+  .special-about-penang h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .special-about-penang p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .special-about-penang .slogan {
+    font-size: 60px;
+    font-weight: bold;
+    color: #0066cc;
+  }
+  

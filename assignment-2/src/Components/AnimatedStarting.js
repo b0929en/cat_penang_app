@@ -62,9 +62,6 @@ const AnimatedStarting = () => {
 
     if (newOpacity === 0) setIsFixed(false);
     }
-
-    
-
   };
 
     window.addEventListener('scroll', handleScroll);
@@ -81,13 +78,14 @@ const AnimatedStarting = () => {
         </div>
 
         <div className={`SectionNav ${isOpen ? 'open' : ''}`}>
-          <button onClick={() => scrollToSection('tourism')} className='nav-link'>Tourism Spots</button>
+          <button onClick={() => scrollToSection('TourismSpots')} className='nav-link'>Tourism Spots</button>
           <button onClick={() => scrollToSection('Food&Beverages')} className='nav-link'>Food & Beverages</button>
           <button onClick={() => scrollToSection('Hotels')} className='nav-link'>Hotels</button>
           <button onClick={() => scrollToSection('events')} className='nav-link'>Events</button>
         </div>
 
         {/*Add About Penang section */}
+        
         {/*Nav-button keeps? changed to>? */}
 
         <div className="nav-buttons">
