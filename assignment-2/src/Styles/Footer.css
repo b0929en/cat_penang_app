@@ -6,7 +6,7 @@
   background-color: rgb(4, 0, 39);
   color: white;
   border: none;
-  padding: 20px 10%;
+  padding: 30px 10%;
   position: relative;
   box-shadow: 0 -10px 20px rgba(80, 80, 80, 0.3);
 }
@@ -27,16 +27,14 @@ p{
 }
 
 .follow-us, .links{
-  margin: 10px;
-  margin-top: 20px;
+  margin: none;
   flex: 20%;
 }
 
 ul{
   list-style-type: none;
   padding-left: 5px;
-  padding-top: 10px;
-  margin: 0;
+  margin-top: 20px;
 }
 
 .links li{
@@ -62,12 +60,11 @@ ul{
 
 .sm-logo{
   display: inline-block;
-  padding-top: 12px;
   margin-right: 15px;
 }
 
 .sm-logo a{
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   color: white;
   text-decoration: none;
   transition: color 0.2s ease-in;

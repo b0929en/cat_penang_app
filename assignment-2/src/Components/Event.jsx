@@ -1,282 +1,59 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Styles/Event.css";
+import Carousel from "./Carousel.jsx"
 
 const Event = () => {
   const items = [
     {
-      id: 1,
-      title: "Island & Beaches",
-      image: "./images/island-beaches.jpg",
-      description: "Discover pristine beaches and crystal-clear waters.",
-      details:
-        "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
+      "id": 1,
+      "title": "Island & Beaches",
+      "image": "/images/island-beaches.jpg",
+      "description": "Discover the serene beaches and crystal-clear waters of Penang.",
+      "details": "Indulge in tropical paradise with activities like snorkeling, diving, and sunbathing. Must-visit spots in Penang include Batu Ferringhi Beach, Balik Pulau, and Teluk Bahang."
     },
     {
-      id: 2,
-      title: "Culture & Heritage",
-      image: "/images/culture-heritage.jpg",
-      description: "Explore rich history and vibrant culture.",
-      details:
-        "Visit historical landmarks, museums, and cultural villages to immerse yourself in Malaysia's unique heritage. Highlights include George Town, Malacca, and Sarawak Cultural Village.",
+      "id": 2,
+      "title": "Culture & Heritage",
+      "image": "/images/culture-heritage.jpg",
+      "description": "Uncover the rich history and vibrant culture of Penang.",
+      "details": "Explore the historical landmarks, museums, and cultural villages that showcase Penang's heritage. Key highlights include George Town, Khoo Kongsi, and the Pinang Peranakan Mansion."
     },
     {
-      id: 3,
-      title: "Family Fun",
-      image: "/images/family-fun.jpg",
-      description: "Enjoy fun activities for all ages.",
-      details:
-        "From theme parks to zoos, Malaysia has plenty of family-friendly attractions like Sunway Lagoon, Legoland, and Zoo Negara.",
+      "id": 3,
+      "title": "Family Fun",
+      "image": "/images/family-fun.jpg",
+      "description": "Enjoy family-friendly adventures in Penang.",
+      "details": "Penang is perfect for family fun with activities such as Escape Theme Park, Penang Hill, and the Penang Butterfly Farm, offering something for everyone."
     },
     {
-      id: 4,
-      title: "City Excitement",
-      image: "/images/city-excitement.jpg",
-      description: "Dive into urban adventures.",
-      details:
-        "Explore bustling cities like Kuala Lumpur and Johor Bahru. Enjoy shopping, nightlife, and iconic landmarks such as the Petronas Twin Towers.",
+      "id": 4,
+      "title": "City Excitement",
+      "image": "/images/city-excitement.jpg",
+      "description": "Experience the vibrant city life of Penang.",
+      "details": "Delve into George Town's urban excitement with its colonial charm, vibrant street art, and local markets. Explore the UNESCO World Heritage Site and iconic attractions like the Penang Peranakan Mansion."
     },
     {
-      id: 5,
-      title: "Shopping",
-      image: "/images/shopping.jpg",
-      description: "Embark on thrilling adventures.",
-      details:
-        "Hike through rainforests, climb Mount Kinabalu, or experience white-water rafting. Adventure awaits in Malaysia's national parks and beyond.",
+      "id": 5,
+      "title": "Shopping",
+      "image": "/images/shopping.jpg",
+      "description": "Indulge in shopping adventures across Penang.",
+      "details": "From lively markets to high-end malls, Penang offers a diverse shopping experience. Popular spots include Gurney Plaza, Penang Street Market, and Queensbay Mall."
     },
     {
-      id: 6,
-      title: "Nature & Adventure",
-      image: "/images/nature-adventure.jpg",
-      description: "Embark on thrilling adventures.",
-      details:
-        "Hike through rainforests, climb Mount Kinabalu, or experience white-water rafting. Adventure awaits in Malaysia's national parks and beyond.",
+      "id": 6,
+      "title": "Nature & Adventure",
+      "image": "/images/nature-adventure.jpg",
+      "description": "Dive into nature and adventure in Penang.",
+      "details": "Hike through lush forests, explore hidden trails, or take a scenic ride up Penang Hill. For nature lovers, Penang National Park offers amazing wildlife and coastal beauty."
     },
     {
-      id: 7,
-      title: "Street Arts",
-      image: "/images/street-art.jpg",
-      description: "Relax in luxurious accommodations.",
-      details:
-        "Choose from beachside resorts, boutique hotels, or eco-lodges for a memorable stay.",
-    },
+      "id": 7,
+      "title": "Street Arts",
+      "image": "/images/street-art.jpg",
+      "description": "Discover the colorful street art scene of Penang.",
+      "details": "Penang is renowned for its vibrant street art, especially in George Town, where murals and sculptures decorate the streets. Dive into the artistic culture with interactive artworks and cozy cafes."
+    }    
   ];
-
-  const cardItems = {
-    1: [
-      {
-        id: 1,
-        title: "Beach 1",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 2,
-        title: "Beach 2",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 3,
-        title: "Beach 3",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 4,
-        title: "Beach 4",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-    ],
-    2: [
-      {
-        id: 1,
-        title: "Cultural 1",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 2,
-        title: "Cultural 2",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 3,
-        title: "Cultural 3",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 4,
-        title: "Cultural 4",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-    ],
-    3: [
-      {
-        id: 1,
-        title: "Family 1",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 2,
-        title: "Family 2",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 3,
-        title: "Family 3",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-    ],
-    4: [
-      {
-        id: 1,
-        title: "City 1",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 2,
-        title: "City 2",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 3,
-        title: "City 3",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 4,
-        title: "City 4",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-    ],
-    5: [
-      {
-        id: 1,
-        title: "Shopping 1",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 2,
-        title: "Shopping 2",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 3,
-        title: "Shopping 3",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-    ],
-    6: [
-      {
-        id: 1,
-        title: "Nature 1",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 2,
-        title: "Nature 2",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 3,
-        title: "Nature 3",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 4,
-        title: "Nature 4",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-    ],
-    7: [
-      {
-        id: 1,
-        title: "Art 1",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 2,
-        title: "Art 2",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-      {
-        id: 3,
-        title: "Art 3",
-        image: "/images/island-beaches.jpg",
-        description: "Discover pristine beaches and crystal-clear waters.",
-        details:
-          "Experience the best of tropical paradise with activities such as snorkeling, diving, and sunbathing. Popular destinations include Langkawi, Perhentian Islands, and Redang.",
-      },
-    ],
-  };
 
   const [selectedItem, setSelectedItem] = useState(null);
   const cardContainerRef = useRef(null);
@@ -307,7 +84,7 @@ const Event = () => {
   };
 
   return (
-    <div className="things-to-do-section" ref={eventRef}>
+    <div id="Event" className="things-to-do-section" ref={eventRef}>
       <h2 className="section-title">Things to Do</h2>
       <p className="section-desc">
         Indulge in an awe-inspiring adventure of a lifetime. Enjoy fun times
@@ -339,29 +116,17 @@ const Event = () => {
             <h3 className="details-title">{selectedItem.title}</h3>
             <p className="details-desc">{selectedItem.details}</p>
 
-            <div className="details-card-container">
-              {cardItems[selectedItem.id]?.map((cardItem) => (
-                <div
-                  key={cardItem.id}
-                  className="details-cardItem"
-                >
-                  <img className="details-card-img" src={cardItem.image}/>
-                  <div className="details-card-info">
-                    <h3>{cardItem.title}</h3>
-                    <p>{cardItem.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <Carousel selectedItemId={selectedItem?.id} />
             
-            <button className="event-nav-btn" onClick={scrollUp}>
+            <button className="event-nav-btn" 
+                    onClick={() => {scrollUp; setSelectedItem(null)}}
+            >
               <i class='bx bx-chevrons-up'></i>
             </button>
 
           </div>
         )}
-
-
+        
       </div>
     </div>
   );
