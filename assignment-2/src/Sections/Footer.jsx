@@ -11,6 +11,22 @@ const Footer = () => {
     });
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      document.body.style.overflow = 'visible';
+      document.body.style.overflowX ='hidden';
+    }
+  };
+
   return(
     <footer className="footer">
       <div className="footer-content">
@@ -32,7 +48,7 @@ const Footer = () => {
             </li>
 
             <li className="sm-logo">
-              <a href="#">
+              <a href="https://youtu.be/xvFZjo5PgG0?si=HvSDLTbYvYHy2-3O">
                 <i class='bx bxl-twitter'></i>
               </a>
             </li>
@@ -43,11 +59,11 @@ const Footer = () => {
         <div className="links">
           <p>Quick Links</p>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Tourism Spots</a></li>
-            <li><a href="#">Food & Beverages</a></li>
-            <li><a href="#">Hotels</a></li>
-            <li><a href="#">Events</a></li>
+            <li> <button onClick={() => scrollToSection('AboutUs')} className='nav-link'>About Us</button></li>
+            <li><button onClick={() => scrollToSection('TourismSpots')} className='nav-link'>Tourism Spots</button></li>
+            <li> <button onClick={() => scrollToSection('Food&Beverages')} className='nav-link'>Food & Beverages</button></li>
+            <li><button onClick={() => scrollToSection('Hotels')} className='nav-link'>Hotels</button></li>
+            <li> <button onClick={() => scrollToSection('Events')} className='nav-link'>Things to Do</button></li>
           </ul>
         </div>
 
