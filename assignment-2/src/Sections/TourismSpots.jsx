@@ -56,7 +56,7 @@ const tourismspots = [
         title: "Escape Theme Park",
         location: "Jalan Teluk Bahang, Tanjung Bungah",
         imageSrc: "../DynamicSources/EscapeThemePark.jpg",
-        details: "Escape Theme Park features thrilling adventures, including the world's longest zip coaster, bungee jumping, flying fox, rock climbing, and suspension bridge crossings, all set in a natural environment that enhances the experience.",
+        details: "Escape Theme Park features thrilling adventures, including the world's longest zip coaster, rock climbing, and suspension bridge crossings, all set in a natural environment that enhances the experience.",
         rating: 5
     },
     {
@@ -70,7 +70,7 @@ const tourismspots = [
         title: "Pinang Peranakan Mansion",
         location: "Church St, Bukit Mertajam",
         imageSrc: "../DynamicSources/PinangPeranakanMansion.jpg",
-        details: "Pinang Peranakan Mansion is a museum showcasing the history of the Peranakan people, also known as Straits Chinese, who blend Chinese and Malay cultures. It features age-old artifacts and exhibits that illustrate their rich heritage.",
+        details: "Pinang Peranakan Mansion is a museum showcasing the history of the Peranakan people, who blend Chinese and Malay cultures. It features age-old artifacts and exhibits that illustrate their rich heritage.",
         rating: 5
     },
     {
@@ -98,7 +98,7 @@ const tourismspots = [
         title: "Gurney Drive",
         location: "Gurney Dr, George Town",
         imageSrc: "../DynamicSources/GurneyDrive.jpg",
-        details: "Gurney Drive is famous for its vibrant hawker centre, offering a variety of local street food. It also features a lovely seaside promenade where people can take a leisurely walk along the beachside, enjoying the sea breeze and scenic views.",
+        details: "Gurney Drive is famous for its vibrant hawker centre, offering a variety of local street food. It also features a lovely seaside promenade where people can take a leisurely walk along the beachside.",
         rating: 5
     },
     {
@@ -133,7 +133,7 @@ const tourismspots = [
         title: "Hin Bus Depot",
         location: "Jln Gurdwara, George Town",
         imageSrc: "../DynamicSources/HinBusDepot.jpg",
-        details: "Hin Bus Depot is a dynamic creative hub where it offers a gallery, arts and event spaces, and creative business outlets. It serves as a platform for artistic expression while promoting sustainability and community engagement.",
+        details: "Hin Bus Depot is a dynamic creative hub where it offers a gallery, arts and event spaces. It serves as a platform for artistic expression while promoting sustainability and community engagement.",
         rating: 4
     },
     {

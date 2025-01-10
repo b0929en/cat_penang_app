@@ -225,13 +225,13 @@
   }
 
   .HeaderBar .SectionNav {
-    display: flex;
+    display: none;
     flex-direction: column;  /* Stack items vertically */
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 60vw;
+    width: 100%;
     background-color: white;
     padding-top: 70px;  /* Space for header */
     transform: translateX(-100%);  /* Hide off-screen by default */
@@ -241,6 +241,8 @@
   }
 
   .HeaderBar .SectionNav.open {
+    display: flex;
+    justify-content: flex-start;
     transform: translateX(0);
   }
 
@@ -248,7 +250,7 @@
     width: 100%;
     padding: 15px 20px;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #eee;
   }
 
