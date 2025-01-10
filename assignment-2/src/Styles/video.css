@@ -2,8 +2,8 @@
 
 .videoFrame iframe{
   display: block;
-  width: 65%;
-  height: 650px;
+  width: 60vw;
+  height: 70vh;
   margin: auto;
   margin-bottom: 150px;
 }

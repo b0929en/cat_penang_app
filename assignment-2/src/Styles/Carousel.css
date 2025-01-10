@@ -84,14 +84,18 @@ body {
 
 .crs-description p {
   color: #000000;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding-top: 5px;
+  line-height: 22px;
 }
 
 .crs-description h4 {
   text-transform: uppercase;
+  line-height: 14px;
+  font-size: 0.9rem;
   padding-top: 5px;
-  color: rgb(83, 83, 83);
+  letter-spacing: .8px;
+  color: rgb(47, 47, 47);
 }
 
 input {

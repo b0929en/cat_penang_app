@@ -71,18 +71,23 @@
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  justify-content: center;
 }
 
 .details-title {
   color: #f47a00;
-  font-size: 2rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .details-desc {
   color: #333;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
   padding-top: 20px;
-  margin: 0 10%;
+  margin: 0 20vw;
 }
 
 .details-card-container{
