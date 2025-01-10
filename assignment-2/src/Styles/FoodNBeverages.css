@@ -12,20 +12,6 @@
   padding: 0 2rem;
 }
 
-.SectionTitle {
-  font-size: 3rem;
-  font-weight: 600;
-  font-family: cursive;
-  margin-bottom: 4rem;
-  position: relative; /* For positioning during animation */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effect for Section Title */
-.SectionTitle:hover {
-  animation: wobble 1s ease-in-out; /* Apply wobble animation */
-}
-
 /* Wobble animation */
 @keyframes wobble {
   0% { transform: rotate(0deg); }
@@ -45,6 +31,7 @@
   width: 100%;
   max-width: 1152px;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 /* Tablet View */ 

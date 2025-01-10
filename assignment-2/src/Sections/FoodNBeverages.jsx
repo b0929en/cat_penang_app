@@ -60,7 +60,7 @@ const items = [
         rating: 4
     },
     {
-        title: "Nyonya Kuih & Dishes",
+        title: "Nyonya Kuih",
         location: "Jalan Masjid, off Lebuh Chulia, George Town",
         imageSrc: "../DynamicSources/Penang_FoodLifestyle_FB_NyonyaKuih.jpg",
         details: "Kuih – these are Malay or Nyonya sweets. They are normally rice flour based with coconut milk, steamed or baked and are very colourful. Some contain glutinous rice, palm sugar and additional flavours are derived from natural sources such as pandan leaves. It all depends on which part of China from which they had migrated. The Nyonya flavours are a step up and they are birthed from the collision of Chinese and Malay cultures. The result is a dilution of both original flavours into something quite unique that marries rich robust spices with the faint opulence of slow cooking.",
@@ -123,6 +123,7 @@ const ItemSection = () => {
     <div id='Food&Beverages' className='fnb-section'>
         <div id='MobileView-BypassScrolling' style={{ height: '5vh' }}></div>
         <div className='section-title'>Food & Beverages</div>
+        <p className='section-desc'>Discover Penang’s vibrant culinary scene, where flavorsome traditions meet modern creativity in a delightful harmony.</p>
         <div className='ItemContainer'>
         {items.map((item, index) => (
             <Card

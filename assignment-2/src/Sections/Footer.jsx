@@ -34,19 +34,19 @@ const Footer = () => {
 
           <ul className="sm-link-list">
             <li className="sm-logo">
-              <a href="https://www.instagram.com/reel/DEZ1NxTp74-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+              <a href="https://www.instagram.com/reel/DEZ1NxTp74-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
                 <i class='bx bxl-instagram-alt'></i>
               </a>
             </li>
 
             <li className="sm-logo">
-              <a href="https://www.facebook.com/choo.yitshern.77" target="_blank">
+              <a href="https://www.facebook.com/choo.yitshern.77" target="_blank" rel="noopener noreferrer">
                 <i class='bx bxl-facebook-circle' ></i>
               </a>
             </li>
 
             <li className="sm-logo">
-              <a href="https://youtu.be/xvFZjo5PgG0?si=HvSDLTbYvYHy2-3O" target="_blank">
+              <a href="https://youtu.be/xvFZjo5PgG0?si=HvSDLTbYvYHy2-3O" target="_blank" rel="noopener noreferrer">
                 <i class='bx bxl-twitter'></i>
               </a>
             </li>

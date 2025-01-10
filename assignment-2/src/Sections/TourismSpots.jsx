@@ -148,9 +148,10 @@ const tourismspots = [
 const ItemSection = () => {
   return (
     <div id='TourismSpots' className='TourismSpotsSection '>
-        <div id='MobileView-BypassScrolling' className='p-10' style={{ height: '10vh' }}></div>
+        <div id='MobileView-BypassScrolling' className='p-10' style={{ height: '15vh' }}></div>
             <div className='section-title'>Tourism Spots</div>
-                <div className='grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-10'>
+            <p className='section-desc'>Uncover the best tourism spots in Penang, where rich history, stunning landscapes, and vibrant culture come together in perfect harmony.</p>
+                <div className='grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-10 mt-6'>
                     {tourismspots.map((spots, index) => (
                         <TourismSpotsCard
                             key={index}

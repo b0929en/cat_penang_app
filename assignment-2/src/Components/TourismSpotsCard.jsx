@@ -14,7 +14,7 @@ const TourismSpotsCard = ({ title, location, imageSrc, details, rating }) => {
     >
       <div className="relative rounded-xl overflow-hidden h-80 w-96">
         {/* Image */}
-        <img src={imageSrc} className="object-cover h-full w-full" />
+        <img src={imageSrc} alt="tourism-spot" className="object-cover h-full w-full" />
 
         {/* Title and Location Overlay */}
         <div className="absolute top-0 left-0 right-0 text-mintgreen bg-green-300 bg-opacity-50 p-4">

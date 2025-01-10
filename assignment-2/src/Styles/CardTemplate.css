@@ -30,21 +30,20 @@
   right: 1rem;
   background-color: rgb(246, 246, 246);
   border-radius: 0.5rem;
-  padding: 0.8rem;
+  padding: 1rem;
   box-shadow: 0 5px 2px rgba(0, 0, 0, 0.05);
 }
 
 .CardLocation {
-  font-size: clamp(0.8rem, 1.5vw, 0.925rem);
+  font-size: clamp(0.8rem, 1.2vw, 0.8rem);
   font-weight: lighter;
   color: #6b7280;
-  margin-bottom: 0.25rem;
   margin: 0;
 }
 
 .CardName {
-  font-size: clamp(0.9rem, 1.7vw, 1rem);
-  font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 600;
   color: #111827;
   margin: 0;
 }
@@ -70,19 +69,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.7);
-  background-color: rgb(241, 239, 240);
   background-image: url('../StaticSources/PopUpWindowBckground.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding: clamp(1rem, 3vw, 20px);
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  border-radius: 20px;
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: 20px;
-  height: 70vh;
-  max-height: 800px;
+  gap: 15px;
+  height: 75vh;
+  max-height: 900px;
   overflow: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
@@ -107,23 +105,23 @@
 
 .WindowPop button {
   float: right;
-  padding: 0.5rem 1rem;
   border: none;
   background-color: #ff0000;
+  color: white;
   border-radius: 0.375rem;
   cursor: pointer;
 }
 
 .WindowPop button:hover {
-  background-color: #cb0000;
+  background-color: #df0404;
 }
 
 .PopupImage {
-  margin-top: 5vh;
+  margin-top: 4vh;
   margin-left: 5vw;
   margin-right: 3vw;
-  box-shadow: 20px 20px 6px rgba(0, 0, 0, 0.5);
-  float:left;
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.4);
+  float: left;
   border-radius: 0.5rem;
   width: 100%;
   max-width: 400px;
@@ -154,44 +152,42 @@
 
 .CloseButton {
   position: absolute;
-  top: 1rem;
+  top: 0;
   font-size:clamp(1rem, 2vw, 1.5rem);
   font-weight: bold;
-  right: 1rem;
+  right: 1.7rem;
   padding: 0.5rem 1rem;
   border: none;
   z-index: 22;
-  border-radius: 0.375rem;
+  border-radius: 0.6rem;
   cursor: pointer;
 }
 
-.CloseButton:hover {
-  background-color: #e5e7eb;
-}
-
 .PopName {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   margin-bottom: 0.7rem;
   color: #111827;
 }
 
 .PopLocation {
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
-  font-weight: 350;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
 .PopDetails {
   color: #4b5563;
   margin-top: 2vh;
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-size: clamp(1.4rem, 2vw, 1.5rem);
   line-height: 1.5;
+  padding-right: 2rem;
 }
+
 .Rating {
   margin: 20px auto;
   position: relative;
   width: 100%;
-  margin-left: 20px;
   text-align: center;
 }
 

@@ -40,12 +40,9 @@
 
 body {
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
   display: none; /* Hides scrollbar in webkit browsers */
-}
-
-body {
-  scrollbar-width: none; /* Hides scrollbar in Firefox */
 }

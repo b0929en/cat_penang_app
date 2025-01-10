@@ -13,19 +13,12 @@
   margin-bottom: 40px;
 }
 
-.section-desc {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 0px 20%;
-  font-size: 1.6rem;
-  color: #909090;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px 30px;
   padding: 60px 10%;
+  padding-top: 20px;
   align-content: center;
 }
 

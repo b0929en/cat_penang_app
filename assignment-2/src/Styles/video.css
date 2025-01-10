@@ -15,6 +15,6 @@
 
   .videoFrame iframe{
     height: 420px;
-    margin-bottom: 200px;
+    margin-bottom: 30vh;
   }
 }

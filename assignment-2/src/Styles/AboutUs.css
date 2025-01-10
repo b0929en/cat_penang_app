@@ -10,7 +10,7 @@
   opacity: 0;
   transition: 0.5s;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -32,23 +32,26 @@
 
 .content{
   position: absolute;
+  padding: 0 15vw;
   color: white;
   top: 20%;
-  width: 60%;
+  width: 100%;
   max-width: 80%;
   z-index: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .content h2{
-  font-size: 80px;
+  font-size: 5.5rem;
+  font-weight: 600;
   margin: 0;
   margin-bottom: 60px;
 }
 
 .content p{
-  line-height: 1.6;
-  padding: 0 20px;
+  line-height: 2;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .content-item.active{

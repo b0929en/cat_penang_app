@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "../Styles/Event.css";
 import Carousel from "../Components/Carousel.jsx"
 
@@ -85,7 +85,7 @@ const Event = () => {
 
   return (
     <div id="Events" className="things-to-do-section" ref={eventRef}>
-      <h2 className="section-title">Things to Do</h2>
+      <div className="section-title">Things to Do</div>
       <p className="section-desc">
         Indulge in an awe-inspiring adventure of a lifetime. Enjoy fun times
         with your family, explore the wilderness, and taste the mouth-watering
