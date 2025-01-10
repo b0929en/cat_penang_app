@@ -21,7 +21,7 @@ const Event = () => {
     {
       "id": 3,
       "title": "Family Fun",
-      "image": "/images/family-fun.jpg",
+      "image": "/images/family-fun.png",
       "description": "Enjoy family-friendly adventures in Penang.",
       "details": "Penang is perfect for family fun with activities such as Escape Theme Park, Penang Hill, and the Penang Butterfly Farm, offering something for everyone."
     },
@@ -85,12 +85,13 @@ const Event = () => {
 
   return (
     <div id="Events" className="things-to-do-section" ref={eventRef}>
-      <div className="section-title">Things to Do</div>
-      <p className="section-desc">
-        Indulge in an awe-inspiring adventure of a lifetime. Enjoy fun times
-        with your family, explore the wilderness, and taste the mouth-watering
-        cuisine of Malaysia.
-      </p>
+      <div className="section-title"><p>Things to Do</p></div>
+      <div className="section-desc">
+        <p> Indulge in an awe-inspiring adventure of a lifetime. Enjoy fun times
+            with your family, explore the wilderness, and taste the mouth-watering
+            cuisine of Malaysia.
+        </p>
+      </div>
 
       <div className="grid-container">
         {items.map((item) => (

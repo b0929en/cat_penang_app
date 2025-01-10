@@ -76,6 +76,7 @@
   justify-self: center;
   z-index: 20;
   align-items: center;
+  right: 10vw;
 }
 .nav-link {
   padding: 8px 16px;
@@ -214,7 +215,7 @@
   top: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .app{
     overflow-x: visible;
   }
@@ -325,6 +326,13 @@
 @media screen and (max-width: 768px) and (min-width: 480px){
   .SectionNav {
     right: 3vw;
+    justify-self: end;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .SectionNav {
+    right: 5vw;
     justify-self: end;
   }
 }

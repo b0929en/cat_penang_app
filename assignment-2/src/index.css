@@ -18,17 +18,43 @@ body {
 }*/
 
 .section-title{
-  font-size: 3.6rem;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.section-desc {
+.section-title p{
+  font-size: 3.6rem;
+}
+
+.section-desc{
   text-align: center;
   margin-bottom: 4rem;
-  padding: 0px 23%;
-  font-size: 1.6rem;
+  padding: 0px 20%;
   font-weight: 500;
   color: #5c5c5c;
+}
+
+.section-desc p{
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-title{
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: .8rem;
+  }
+  
+  .section-title p{
+    font-size: 3.2rem;
+  }
+  
+  .section-desc{
+    margin-bottom: 6rem;
+  }
+  
+  .section-desc p{
+    font-size: 1.3rem;
+  }
 }

@@ -2,48 +2,43 @@
     display: none;
   }
   
-  .TourismSpotsSection {
-    display: grid;
-    place-items: center;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    background-size: cover;
-    background-position: center center;
-    padding: 0 2rem;
+.TourismSpotsSection {
+  display: grid;justify-self: center;
+  place-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.TourismSpotsItemContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* Tablet View */ 
+@media (max-width: 768px) {
+  .MobileView-BypassScrolling {
+    display: flex;
   }
-  
   .TourismSpotsItemContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    justify-content: center;
-    width: 100%;
-    max-width: 1152px;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  /* Tablet View */ 
-  @media (max-width: 768px) {
-    .MobileView-BypassScrolling {
-      display: flex;
-    }
-    .TourismSpotsItemContainer {
-      grid-template-columns: repeat(3, 1fr);
-    }
+}
+
+@media (max-width: 480px) {
+  .MobileView-BypassScrolling {
+    display: flex;
   }
-  
-  @media (max-width: 480px) {
-    .TourismSpotsSection {
-      background-image: url('../StaticSources/Mobile-FoodBckground.jpeg');
-    }
-    .MobileView-BypassScrolling {
-      display: flex;
-    }
-    .TourismSpotsItemContainer {
-      gap: 2rem;
-      grid-template-columns: 1fr;
-    }
+  .TourismSpotsItemContainer {
+    gap: 2rem;
+    grid-template-columns: 1fr;
   }
-  
+}

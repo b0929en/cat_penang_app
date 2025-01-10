@@ -122,8 +122,8 @@ const ItemSection = () => {
   return (
     <div id='Food&Beverages' className='fnb-section'>
         <div id='MobileView-BypassScrolling' style={{ height: '5vh' }}></div>
-        <div className='section-title'>Food & Beverages</div>
-        <p className='section-desc'>Discover Penang’s vibrant culinary scene, where flavorsome traditions meet modern creativity in a delightful harmony.</p>
+        <div className='section-title'><p>Food & Beverages</p></div>
+        <div className='section-desc'><p>Discover Penang’s vibrant culinary scene, where flavorsome traditions meet modern creativity in a delightful harmony.</p></div>
         <div className='ItemContainer'>
         {items.map((item, index) => (
             <Card

@@ -79,14 +79,14 @@
   display: grid;
   grid-template-columns: 40% 60%;
   gap: 15px;
-  height: 75vh;
+  height: 70vh;
   max-height: 900px;
   overflow: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
   z-index: 21;
-  max-width: 1200px;
-  width: 90%;
+  max-width: 1000px;
+  width: 80%;
 }
 
 .Left-Side {
@@ -164,14 +164,14 @@
 }
 
 .PopName {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 3vw, 2.7rem);
   font-weight: 600;
   margin-bottom: 0.7rem;
   color: #111827;
 }
 
 .PopLocation {
-  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
@@ -179,7 +179,7 @@
 .PopDetails {
   color: #4b5563;
   margin-top: 2vh;
-  font-size: clamp(1.4rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 1.5vw, 1.2rem);
   line-height: 1.5;
   padding-right: 2rem;
 }

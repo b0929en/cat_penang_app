@@ -5,6 +5,7 @@
   border: none;
   padding: 30px 12%;
   position: relative;
+  width: 100%;
   box-shadow: 0 -10px 20px rgba(80, 80, 80, 0.3);
 }
 
@@ -20,7 +21,7 @@
 
 p{
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .follow-us, .links{
@@ -30,7 +31,7 @@ p{
 
 ul{
   list-style-type: none;
-  padding-left: 5px;
+  padding-left: 0;
   margin-top: 20px;
 }
 
@@ -39,8 +40,8 @@ ul{
 }
 
 .links li p{
-  padding: 8px 16px;
-  font-size: 1.4rem;
+  padding: 10px 16px;
+  font-size: 1rem;
   font-weight: 300;
 }
 
@@ -48,7 +49,7 @@ ul{
   color: white;
   text-align: left;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 
@@ -67,7 +68,7 @@ ul{
 }
 
 .sm-logo a{
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   color: white;
   text-decoration: none;
   transition: color 0.2s ease-in;

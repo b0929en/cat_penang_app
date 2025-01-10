@@ -80,10 +80,10 @@ const ItemSection = () => {
   return (
     <div id='Hotels' className='HotelSection'>
     <div id='MobileView-BypassScrolling' style={{ height: '10vh' }}></div>
-    <div className='section-title'>Hotels</div>
-    <p className='section-desc'>
-        Explore the finest accommodations in Penang, offering a harmonious blend of comfort, luxury, and heritage.
-    </p>
+    <div className='section-title'><p>Hotels</p></div>
+    <div className='section-desc'>
+        <p>Explore the finest accommodations in Penang, offering a harmonious blend of comfort, luxury, and heritage.</p>
+    </div>
     <div className='HotelItemContainer'>
     {hotels.map((hotel, index) => (
         <HotelCard
