@@ -117,3 +117,18 @@
     font-size: 50px;
   }
 }
+
+@media screen and (max-width: 426px) {
+  .content p {
+    font-size: 20px;
+    padding: 0 0;
+  }
+  .content {
+    width: 80%;
+  }
+  
+  .content h2 {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+}

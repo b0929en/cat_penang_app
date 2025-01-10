@@ -36,6 +36,7 @@ const AnimatedStarting = () => {
         behavior: 'smooth'
       });
       document.body.style.overflow = 'visible';
+      document.body.style.overflowX = 'hidden';
       setIsOpen(false);
     }
   };
@@ -70,14 +71,14 @@ const AnimatedStarting = () => {
 
   return (
     <div className="app">
-      <div className={`sidebar-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}/>
+      <div className={`sidebar-overlay ${isOpen ? 'open' : 'close'}`} onClick={() => setIsOpen(false)}/>
       <div className={`HeaderBar ${showHeaderBackground ? 'with-background' : ''}`}>
         <div onClick={scrollToTop} className='Home-logo' role="button" tabIndex={0}>
           <img src= {PenangLogo} alt='Penang state' className='Penang  LogoPic'/>
           <p className='LogoTitle'>Penang</p>
         </div>
 
-        <div className={`SectionNav ${isOpen ? 'open' : ''}`}>
+        <div className={`SectionNav ${isOpen ? 'open' : 'close'}`}>
           <button onClick={() => scrollToSection('TourismSpots')} className='nav-link'>Tourism Spots</button>
           <button onClick={() => scrollToSection('Food&Beverages')} className='nav-link'>Food & Beverages</button>
           <button onClick={() => scrollToSection('Hotels')} className='nav-link'>Hotels</button>

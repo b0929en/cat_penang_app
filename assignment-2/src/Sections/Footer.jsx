@@ -1,6 +1,5 @@
 import React from "react"
 import "../Styles/Footer.css"
-//import "./index.css"
 
 const Footer = () => {
 
@@ -9,6 +8,21 @@ const Footer = () => {
       top: 0,
       behavior: 'smooth', // Smooth scrolling effect
     });
+  };
+  
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      document.body.style.overflow = 'visible';
+      document.body.style.overflowX ='hidden';
+    }
   };
 
   return(
@@ -32,7 +46,7 @@ const Footer = () => {
             </li>
 
             <li className="sm-logo">
-              <a href="#">
+              <a href="https://youtu.be/xvFZjo5PgG0?si=HvSDLTbYvYHy2-3O" target="_blank">
                 <i class='bx bxl-twitter'></i>
               </a>
             </li>
@@ -43,20 +57,20 @@ const Footer = () => {
         <div className="links">
           <p>Quick Links</p>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Tourism Spots</a></li>
-            <li><a href="#">Food & Beverages</a></li>
-            <li><a href="#">Hotels</a></li>
-            <li><a href="#">Events</a></li>
+          <li> <button onClick={() => scrollToSection('AboutUs')} className='nav-link'>About Us</button></li>
+            <li><button onClick={() => scrollToSection('TourismSpots')} className='nav-link'>Tourism Spots</button></li>
+            <li> <button onClick={() => scrollToSection('Food&Beverages')} className='nav-link'>Food & Beverages</button></li>
+            <li><button onClick={() => scrollToSection('Hotels')} className='nav-link'>Hotels</button></li>
+            <li> <button onClick={() => scrollToSection('Events')} className='nav-link'>Things to Do</button></li>
           </ul>
         </div>
 
         <div className="contact-us links">
           <p>Contact Us</p>
           <ul>
-            <li><a href="#">H.P: 012-345 6789</a></li>
-            <li><a href="#">Email: penang@gov.my</a></li>
-            <li><a href="#">Fax: 1234 5678</a></li>
+            <li><p>H.P: 012-345 6789</p></li>
+            <li><p>Email: penang@gov.my</p></li>
+            <li><p>Fax: 1234 5678</p></li>
           </ul>
         </div>
 

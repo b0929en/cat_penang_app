@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../Styles/AboutUs.css";
 
 const AboutUs = () => {
@@ -42,7 +42,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="slider">
+    <div className="slider" id="AboutUs">
       <div className="about-list">
         {contents.map((item, index) => (
           <div
