@@ -9,13 +9,14 @@ const Footer = () => {
       behavior: 'smooth', // Smooth scrolling effect
     });
   };
-  
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       const headerOffset = 80; // Adjust this value based on your header height
       const elementPosition = section.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -46,7 +47,7 @@ const Footer = () => {
             </li>
 
             <li className="sm-logo">
-              <a href="https://youtu.be/xvFZjo5PgG0?si=HvSDLTbYvYHy2-3O" target="_blank" rel="noopener noreferrer">
+              <a href="#">
                 <i class='bx bxl-twitter'></i>
               </a>
             </li>
@@ -57,7 +58,7 @@ const Footer = () => {
         <div className="links">
           <p>Quick Links</p>
           <ul>
-          <li> <button onClick={() => scrollToSection('AboutUs')} className='nav-link'>About Us</button></li>
+            <li> <button onClick={() => scrollToSection('AboutUs')} className='nav-link'>About Us</button></li>
             <li><button onClick={() => scrollToSection('TourismSpots')} className='nav-link'>Tourism Spots</button></li>
             <li> <button onClick={() => scrollToSection('Food&Beverages')} className='nav-link'>Food & Beverages</button></li>
             <li><button onClick={() => scrollToSection('Hotels')} className='nav-link'>Hotels</button></li>
