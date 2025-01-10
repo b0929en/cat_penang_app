@@ -71,20 +71,20 @@ const Event = () => {
     }
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (selectedItem !== null) {
       scrollDown();
     } else {
       scrollUp();
     }
-  }, [selectedItem]);
+  }, [selectedItem]);*/
 
   const handleBoxClick = (item) => {
     setSelectedItem((prevItem) => (prevItem?.id === item.id ? null : item)); 
   };
 
   return (
-    <div id="Event" className="things-to-do-section" ref={eventRef}>
+    <div id="Events" className="things-to-do-section" ref={eventRef}>
       <h2 className="section-title">Things to Do</h2>
       <p className="section-desc">
         Indulge in an awe-inspiring adventure of a lifetime. Enjoy fun times
@@ -100,7 +100,11 @@ const Event = () => {
                 ${selectedItem?.id === item.id ? "active" : ""}
                 ${item.id === 6 ? "item-long" : ""}`}
             style={{ backgroundImage: `url(${item.image})` }}
-            onClick={() => handleBoxClick(item)}
+            onClick={() => {
+              handleBoxClick(item); 
+              scrollDown(); 
+            }}
+            
           >
             <div className="overlay">
               <h3>{item.title}</h3>

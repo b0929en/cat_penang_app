@@ -2,17 +2,14 @@
   display: none;
 }
 
-.Section {
+.fnb-section {
   display: grid;
   place-items: center;
   align-items: center;
   align-content: center;
   justify-content: center;
   justify-items: center;
-  /*background-image: url('../StaticSources/SectionBackground1.png');*/
-  background-size: cover;
-  background-position: center center;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .SectionTitle {
@@ -43,7 +40,7 @@
 .ItemContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
+  gap: 4rem 2.5rem;
   justify-content: center;
   width: 100%;
   max-width: 1152px;

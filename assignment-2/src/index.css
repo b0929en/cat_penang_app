@@ -7,16 +7,19 @@ body {
     sans-serif;*/
   font-family: "roboto", serif;
   background-color: beige;
+  overflow: scroll;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/*code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+}*/
 
 .section-title{
   font-size: 3.6rem;
+  font-weight: 600;
   margin-top: 0;
+  margin-bottom: 40px;
 }

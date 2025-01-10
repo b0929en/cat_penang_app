@@ -56,16 +56,33 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: rgb(255, 255, 255, 0.8);
   color: black;
   padding: 10px;
   width: 100%;
   text-align: center;
-  height: 50%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+.CardOverlay h3{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 30px;
+  color: rgb(85, 85, 85)
+}
+
+.CardOverlay p:nth-child(2){
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.CardOverlay p:nth-child(3){
+  font-size: 18px;
+}
+
 
 /* Back of Card */
 .CardBack {
@@ -75,19 +92,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../StaticSources/hotelcardbg.jpg');
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 30%,
+      rgba(0, 0, 0, 0)
+    ),
+    url('../StaticSources/hotelcardbg.jpg');
   background-size: cover;
   background-position: center;
   color: rgb(255, 255, 255);
-  font-size: larger;
-  font-weight: 500;
-  text-shadow: 2px 2px 0px black, 
-                 -2px -2px 0px black, 
-                 2px -2px 0px black, 
-                 -2px 2px 0px black;
   padding: 20px;
-  background-color: transparent;
   border: none;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),  
+    0 6px 12px rgba(0, 0, 0, 0.2), 
+    0 12px 24px rgba(0, 0, 0, 0.3); 
+}
+
+.CardBack p{
+  font-size: 18px;
+  font-weight: 550;
 }
 
 @media (max-width: 1024px) {

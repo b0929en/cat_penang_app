@@ -54,9 +54,9 @@ const Footer = () => {
         <div className="contact-us links">
           <p>Contact Us</p>
           <ul>
-            <li><a href="#">Phone xxx</a></li>
-            <li><a href="#">Email xxx</a></li>
-            <li><a href="#">Fax xxx</a></li>
+            <li><a href="#">H.P: 012-345 6789</a></li>
+            <li><a href="#">Email: penang@gov.my</a></li>
+            <li><a href="#">Fax: 1234 5678</a></li>
           </ul>
         </div>
 

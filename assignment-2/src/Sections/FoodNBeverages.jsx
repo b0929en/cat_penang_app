@@ -120,8 +120,8 @@ const items = [
 
 const ItemSection = () => {
   return (
-    <div id='Food&Beverages' className='Section'>
-        <div id='MobileView-BypassScrolling' style={{ height: '40vh' }}></div>
+    <div id='Food&Beverages' className='fnb-section'>
+        <div id='MobileView-BypassScrolling' style={{ height: '5vh' }}></div>
         <div className='section-title'>Food & Beverages</div>
         <div className='ItemContainer'>
         {items.map((item, index) => (
@@ -135,7 +135,7 @@ const ItemSection = () => {
             />
         ))}
         </div>
-        <div style={{ height: '40vh' }}></div>
+        <div style={{ height: '10vh' }}></div>
     </div>
   );
 };

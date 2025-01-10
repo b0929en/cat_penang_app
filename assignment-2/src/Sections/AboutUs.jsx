@@ -37,14 +37,6 @@ const AboutUs = () => {
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % contents.length);
-    }, 12000);
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [contents.length]);
-
   const setActiveSlide = (index) => {
     setCurrentIndex(index);
   };
